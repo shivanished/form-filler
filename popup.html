@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>My Extension</title>
+    <title>Image Upload</title>
 </head>
 <body>
-    <h1>Welcome to My Extension!</h1>
-    <button id="myButton">Click Me</button>
-    <p id="message"></p>
+    <button id="upload-button">Upload Image</button>
+    <input type="file" id="file-input" accept="image/*" style="display: none;">
+    <div id="file-name"></div>
+
     <script src="popup.js"></script>
 </body>
 </html>
