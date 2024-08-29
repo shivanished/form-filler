@@ -1,6 +1,14 @@
 body {
     font-family: Arial, sans-serif;
     padding: 10px;
+    margin: 20px; /* Add margin to create space around the body */
+    border-radius: 20px; /* Apply border-radius to round the corners */
+    background-color: #f4f4f4; /* Add a background color for contrast */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for a raised effect */
+    max-width: 90%; /* Set a max width to prevent the body from taking the full width */
+    max-height: 90%; /* Set a max height to prevent the body from taking the full height */
+    overflow: hidden; /* Hide any overflow content that extends beyond the rounded corners */
+    margin: auto; /* Center the body content */
 }
 
 h1 {
@@ -34,4 +42,46 @@ p {
     color: blue;
     text-decoration: underline;
     cursor: pointer;
+}
+
+.button-27 {
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    will-change: transform;
+}
+
+.button-27:disabled {
+    pointer-events: none;
+}
+
+.button-27:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.button-27:active {
+    box-shadow: none;
+    transform: translateY(0);
 }
