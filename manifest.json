@@ -1,20 +1,32 @@
 {
-    "manifest_version": 3,
-    "name": "My Chrome Extension",
-    "version": "1.0",
-    "description": "A simple Chrome extension.",
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "assets/kanye16.png",
-        "48": "assets/kanye48.png",
-        "128": "assets/kanye128.png"
-      }
-    },
-    "permissions": ["scripting", "tabs", "storage", "activeTab"],
-    "icons": {
+  "manifest_version": 3,
+  "name": "USCIS Form Extractor",
+  "version": "1.0",
+  "description": "Extracts questions and form types from USCIS forms.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
       "16": "assets/kanye16.png",
       "48": "assets/kanye48.png",
       "128": "assets/kanye128.png"
     }
+  },
+  "permissions": ["scripting", "tabs", "storage", "activeTab"],
+  "host_permissions": [
+    "https://www.uscis.gov/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.uscis.gov/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "assets/kanye16.png",
+    "48": "assets/kanye48.png",
+    "128": "assets/kanye128.png"
+  }
 }
