@@ -4,7 +4,7 @@
   "version": "1.0",
   "description": "Extracts questions and form types from USCIS forms.",
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "src/popup.html",
     "default_icon": {
       "16": "assets/kanye16.png",
       "48": "assets/kanye48.png",
@@ -16,12 +16,12 @@
     "https://www.uscis.gov/*"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "/src/background.js"
   },
   "content_scripts": [
     {
       "matches": ["https://www.uscis.gov/*"],
-      "js": ["content.js"]
+      "js": ["/src/content.js"]
     }
   ],
   "icons": {
